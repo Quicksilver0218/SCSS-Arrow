@@ -3,12 +3,13 @@
 ```scss
 $arrow-size: .35em;
 
-.arrow {
+@mixin arrow {
     display: inline-flex;
     border: currentColor solid $arrow-size;
 }
 
 .arrow-up {
+    @include arrow;
     border-top: 0;
     border-right-color: transparent;
     border-left-color: transparent;
@@ -16,6 +17,7 @@ $arrow-size: .35em;
 }
 
 .arrow-down {
+    @include arrow;
     border-bottom: 0;
     border-right-color: transparent;
     border-left-color: transparent;
@@ -23,6 +25,7 @@ $arrow-size: .35em;
 }
 
 .arrow-left {
+    @include arrow;
     border-left: 0;
     border-top-color: transparent;
     border-bottom-color: transparent;
@@ -30,6 +33,7 @@ $arrow-size: .35em;
 }
 
 .arrow-right {
+    @include arrow;
     border-right: 0;
     border-top-color: transparent;
     border-bottom-color: transparent;
